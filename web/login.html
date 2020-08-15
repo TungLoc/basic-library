@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                border:none;
+                font-family: 'Open Sans', sans-serif;
+            }
+            body {
+                overflow: hidden;
+                background-color: #ededed;
+            }
+            form {
+                box-sizing: border-box;
+                width: 260px;
+                margin: 100px auto 0;
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+                padding-bottom: 40px;
+                border-radius: 3px;
+                background-color: white;
+            }
+            form h1 {
+                box-sizing: border-box;
+                padding: 30px;
+            }
+            #text {
+                margin: 40px 25px;
+                width: 200px;
+                display: block;
+                border: none;
+                padding: 10px 0;
+                border-bottom: solid 1px #1abc9c;
+                transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
+                background-position: -200px 0;
+                background-size: 200px 100%;
+                background-repeat: no-repeat;
+                color: #0e6252;
+            }
+            #text:focus, #text:valid {
+                box-shadow: none;
+                outline: none;
+                background-position: 0 0;
+            }
+            #text:focus::-webkit-input-placeholder, #text:valid::-webkit-input-placeholder {
+                color: #1abc9c;
+                font-size: 11px;
+                transform: translateY(-20px);
+                visibility: visible !important;
+            }
+            #btn {
+                border: none;
+                background: #1abc9c;
+                cursor: pointer;
+                border-radius: 3px;
+                padding: 6px;
+                width: 200px;
+                color: white;
+                margin-left: 25px;
+                box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+            }
+            #btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+            }
+            .create a{
+                color: green;
+                font-size: 1em;
+                padding: 6px;
+                margin-left: 25px;
+            }
+            .create a:hover{
+                color:#ff3366;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form action="MainController" method="POST">
+                <h1>LOGIN</h1>
+                <input id="text" placeholder="Username" type="text" name="txtUsername" value="" /></br>
+                <input id="text" placeholder="Password" type="password" name="txtPassword" value="" /></br> 
+                <input id="btn" type="submit" name="btnAction" value="Login" /></br>
+                <div class="create">
+                    <a href="createNewAccount.jsp">Create new account</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
